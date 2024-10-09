@@ -20,6 +20,9 @@ Route::get('/consultar', function () {
 })->name('rutaClientes');
 
 
-Route::view('/','Inicio')-> name('rutaInicio');
+Route::view('/','Inicio')->name('rutaInicio');
 Route::view('/form','formulario')->name('rutaForm');
-Route::view('/consultar','clientes')-> name('rutaClientes');
+Route::view('/consultar','clientes')->name('rutaClientes');
+
+Route::view('/component','componentes')->name('rutacomponent');
+

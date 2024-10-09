@@ -1,6 +1,6 @@
 
 @extends('layouts.plantilla')
-
+@section('titulo', 'Clientes')
 @section('contenido')
 
     {{-- Inicia tarjetaCliente --}}
