@@ -16,6 +16,11 @@
     Otro gaaato!!
 </x-Card>
 
+<x-Alert tipo="danger">  rojo  </x-Alert>
+<x-Alert tipo="warning">  amarillo </x-Alert>
+
+
+
 
 
 
