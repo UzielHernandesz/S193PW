@@ -30,11 +30,13 @@ use App\Http\Controllers\ControladorVistas;
 
 Route::view('/component','componentes')->name('rutacomponent');
 
-// ruta para controlador 
+//  ruta para controlador 
 
-Rute::get('/', [ControladorVistas::class, 'home' ])->name('rutaInicio');
+Route::get('/', [ControladorVistas::class, 'home' ])->name('rutaInicio');
 
-Rute::get('/', [ControladorVistas::class, 'formulario' ])->name('rutaForm');
+Route::get('/form', [ControladorVistas::class, 'formulario' ])->name('rutaForm');
 
-Rute::get('/', [ControladorVistas::class, 'consulta' ])->name('rutaClientes');
+Route::get('/consultar', [ControladorVistas::class, 'consulta' ])->name('rutaClientes');
+
+Route::post('/enviarCliente', [ControladorVistas::class, 'procesarCliente' ])->name('rutaEnviar');
 

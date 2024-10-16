@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite(['resources/js/app.js'])
-    <title> @yield('titulo') </title>
+    <title> @yield('$Inicion') </title>
 </head>
 <body>
 {{-- Inicia navbar --}}
@@ -18,10 +18,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="{{route ('rutaForm') }} ">Registro Clientes</a>
+                        <a class="nav-link {{ request()->routeIS('rutaform')?'text-warning':'' }}" aria-current="page" href="{{route ('rutaForm') }} ">Registro Clientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Consulta Clientes</a>
+                        <a class="nav-link {{ request()->routeIS('rutaform')?'text-warning':'' }}" href="{{route ('rutaClientes') }}" >Consulta Cliente</a>
                     </li>
                 </ul>
             </div>
