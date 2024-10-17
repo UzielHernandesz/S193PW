@@ -14,6 +14,9 @@
     <h2 class="text-center">Grupo: S-193 </h2>
     <h2 class="text-center">Materia: Programcion web </h2>
 
+    <div class="container text-center">
+    <a href="/repaso1"> <button type="button" class="btn btn-primary btn-lg"> REPASO 1 </button> </a>
+    </div>
 
 </body>
 </html>
