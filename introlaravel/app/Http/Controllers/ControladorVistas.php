@@ -47,6 +47,16 @@ class ControladorVistas extends Controller
 
 
 // redireccion con un mensaje flash en session
+
+
+    $validacion = $peticion-> validate([
+        'txtnombre'=>'required |min:4 |max:20',
+        'txtapellido'=> 'required |min:4 |max:20',
+        'txtcorreo'=> 'email:rfc:dns',
+        'txttelefono'=> 'required|numeric'
+
+    ]);
+
     $usuario= $peticion->input('txtnombre');
 
     session()->flash('exito',' Se guardo el usuario: ' . $usuario);
