@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\LibroController::class, 'index'])->name('principal');
+Route::get('/', [LibroController::class, 'index'])->name('principal');
 
 Route::get('/libros/registrar', [LibroController::class, 'create'])->name('libros.create');
 Route::post('/libros', [LibroController::class, 'store'])->name('libros.store');
