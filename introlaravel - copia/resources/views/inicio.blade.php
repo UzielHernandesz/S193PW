@@ -22,7 +22,7 @@
         <p> {{ __('Presiona el botón para iniciar....')  }}</p>
 
 
-        <a href="{{ route('rutaForm') }}" class="btn btn-primary"> {{ __('Ir al Registro')  }}</a>
+        <a href="/form" class="btn btn-primary"> {{ __('Ir al Registro')  }}</a>
 
 
 
