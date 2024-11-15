@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\validadorCliente;
 
 
+
 class ControladorVistas extends Controller
 {
     // usamos este controlador para administrar la logica de las vistas
@@ -50,8 +51,8 @@ class ControladorVistas extends Controller
 
     $usuario= $peticion->input('txtnombre');
 
-    session()->flash('exito',' Se guardo el usuario: ' . $usuario);
-    return to_route('rutaForm');
+    // session()->flash('exito',' Se guardo el usuario: ' . $usuario);
+    // return to_route('rutaForm');
 
 
 

@@ -38,12 +38,18 @@ Route::get('/', [ControladorVistas::class, 'home' ])->name('rutaInicio');
 // Route::get('/form', [ControladorVistas::class, 'formulario' ])->name('rutaForm');
 
 
-Route::get('/consultar', [ControladorVistas::class, 'consulta' ])->name('rutaClientes');
+// Route::get('/consultar', [ControladorVistas::class, 'consulta' ])->name('rutaClientes');
 
-Route::post('/enviarCliente', [ControladorVistas::class, 'procesarCliente' ])->name('rutaEnviar');
+// Route::post('/enviarCliente', [ControladorVistas::class, 'procesarCliente' ])->name('rutaEnviar');
 
 // Rutas para cliente controlador
 
 Route::get('/cliente/create', [clienteController::class, 'create' ])->name('rutaForm');
+
+Route::post('/cliente', [clienteController::class, 'store' ])->name('rutaEnviar');
+
+Route::get('/cliente', [clienteController::class, 'index' ])->name('rutaClientes');
+
+
 
 
