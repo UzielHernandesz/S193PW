@@ -31,6 +31,8 @@ use App\Http\Controllers\ControladorVistas;
 
 Route::view('/component','componentes')->name('rutacomponent');
 
+
+
 //  ruta para controlador Vistas
 
 Route::get('/', [ControladorVistas::class, 'home' ])->name('rutaInicio');
@@ -50,6 +52,15 @@ Route::post('/cliente', [clienteController::class, 'store' ])->name('rutaEnviar'
 
 Route::get('/cliente', [clienteController::class, 'index' ])->name('rutaClientes');
 
+// Route::get('/cliente/edit', [clienteController::class, 'edit' ])->name('rutaForm2');
+
+Route::get('/clientes/{id}/edit', [ClienteController::class, 'edit'])->name('cliente.edit');
+
+Route::put('/clientes/{id}', [ClienteController::class, 'update'])->name('clientes.update');
+
+
+
+// Route::get('/cliente', [clienteController::class, 'edit' ])->name('datoscliente');
 
 
 
