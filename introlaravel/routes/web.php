@@ -52,11 +52,14 @@ Route::post('/cliente', [clienteController::class, 'store' ])->name('rutaEnviar'
 
 Route::get('/cliente', [clienteController::class, 'index' ])->name('rutaClientes');
 
-// Route::get('/cliente/edit', [clienteController::class, 'edit' ])->name('rutaForm2');
+Route::get('/cliente/{id}/edit', [clienteController::class, 'edit' ])->name('rutaForm2');
 
-Route::get('/clientes/{id}/edit', [ClienteController::class, 'edit'])->name('cliente.edit');
+Route::put('/cliente/{id}', [clienteController::class, 'update' ])->name('rutaUpdate');
 
-Route::put('/clientes/{id}', [ClienteController::class, 'update'])->name('clientes.update');
+
+
+Route::delete('/cliente/{id}', [clienteController::class, 'destroy' ])->name('rutaDelete');
+
 
 
 

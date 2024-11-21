@@ -78,6 +78,7 @@
             </div>
         </div>
     </div>
+
     {{-- Finaliza Tarjeta con formulario --}}
 
 @endsection

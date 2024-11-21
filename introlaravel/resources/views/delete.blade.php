@@ -1,44 +1,21 @@
-
 @extends('layouts.plantilla')
 @section('titulo', 'Formulario')
 @section('contenido')
 
     <div class="container mt-5 col-md-6">
+
+
         @if (session('exito'))
 
 
-            <x-Alert tipo="success"> {{session('exito')}} </x-Alert>
-        @endif
-
-        @session('exito')
-        <x-Alert tipo="warning"> {{ $value }} </x-Alert>
-
-        @endsession
-
-        @session('exito')
-
-        <script>
-            Swal.fire({
-        title: "Respuesta servidor",
-        text: "{{$value}}",
-        icon: "success"
-        });
-        </script>
-
-        @endsession
-
-
-        {{-- @if (session('exito'))
-
-
         <x-Alert tipo="success"> {{session('exito')}} </x-Alert>
-    @endif --}}
+    @endif
         <div class="card font-monospace">
             <div class="card-header fs-5 text-center text-primary">
-                {{ __('Actualizar Datos del Cliente') }}
+                {{ __('Eliminar Datos del Cliente') }}
             </div>
             <div class="card-body text-justify">
-                <form action="{{ route('rutaUpdate', $cliente->id) }}" method="POST" onsubmit="confirmarActualizacion()">
+                <form action="{{ route('rutaUpdate', $cliente->id) }}" method="POST" onsubmit="confirmarEliminacion()">
                     @csrf
                     @method('PUT')
 
@@ -80,8 +57,8 @@
         </div>
     </div>
     <script>
-        function confirmarActualizacion() {
-            return confirm('¿Está seguro de que desea actualizar los datos del cliente?');
+        function confirmarEliminacion() {
+            return confirm('¿Está seguro de que desea ELIMINAR los datos del cliente?');
         }
     </script>
 @endsection

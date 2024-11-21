@@ -22,13 +22,27 @@
             </div>
             <div class="card-footer text-muted">
                 {{-- <button type="submit" class="btn btn-warning btn-sm">{{ __('Actualizar') }}</button> --}}
-        <a href="{{ route('rutaForm') }}" class="btn btn-primary"> {{ __('Actualizar')  }}</a>
+        <a href="{{ route('rutaForm2',$cliente->id) }}" class="btn btn-primary"> {{ __('Actualizar')  }}</a>
 
-                <button type="submit" class="btn btn-danger btn-sm">{{ __('Eliminar') }}</button>
+
+        <form action="{{ route('rutaDelete', $cliente->id) }}" method="POST" class="d-inline" onsubmit="confirmarEliminacion()">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-danger btn-sm">{{ __('Eliminar') }}</button>
+        </form>
+
+        {{-- <a href="{{ route('rutaDelete',$cliente->id) }}" class="btn btn-primary"> {{ __('Eliminar')  }}</a> --}}
+                {{-- <button type="submit" class="btn btn-danger btn-sm">{{ __('Eliminar') }}</button> --}}
             </div>
         </div>
     @endforeach
 </div>
+<script>
+    function confirmarEliminacion() {
+        return confirm('¿Está seguro de que desea ELIMINAR los datos del cliente?');
+    }
+</script>
+
 {{-- Finaliza tarjetaCliente --}}
 
 @endsection
