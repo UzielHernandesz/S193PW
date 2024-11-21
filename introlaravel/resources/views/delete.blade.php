@@ -49,13 +49,16 @@
 
                     <div class="card-footer text-muted">
                         <div class="d-grid gap-2 mt-2 mb-1">
-                            <button type="submit" class="btn btn-success btn-sm">{{ __('Actualizar Datos') }}</button>
+                            <button type="submit" class="btn btn-success btn-sm">{{ __('Eliminar Datos') }}</button>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+
+
+
     <script>
         function confirmarEliminacion() {
             return confirm('¿Está seguro de que desea ELIMINAR los datos del cliente?');

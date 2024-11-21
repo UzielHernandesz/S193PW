@@ -4,6 +4,20 @@
 @section('titulo', 'Clientes')
 @section('contenido')
 
+@if (@session('exito'))
+<script>
+    Swal.fire({
+        title: "Accion Realizada Correctamente",
+        text: "{{session('exito') }}",
+        icon: "success",
+        confirmButtonText: "Aceptar"
+    });
+
+</script>
+
+
+@endif
+
 {{-- Inicia tarjetaCliente --}}
 <div class="container mt-5 col-md-8">
     @foreach ($consultaclientes as $cliente)

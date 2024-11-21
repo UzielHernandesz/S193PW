@@ -94,9 +94,10 @@ public function update(validadorCliente $request, $id)
         ]);
 
 
-        $usuario = $request->input('txtnombre');
-        session()->flash('exito', 'Se guardó el usuario: ' . $usuario);
-        return redirect()->route('rutaClientes');
+        // $usuario = $request->input('txtnombre');
+        // session()->flash('exito', 'Se guardó el usuario: ' . $usuario);
+        return redirect()->route('rutaClientes')->with('exito', 'Datos actualizados correctamente');
+        // return redirect()->route('rutaClientes');
 }
 
     /**
@@ -107,15 +108,16 @@ public function update(validadorCliente $request, $id)
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy( $id)
+    public function destroy($id)
     {
         // $cliente = DB::table('clientes')->where('id', $id)->first();
 
         DB::table('clientes')->where('id', $id)->delete();
 
 
-        return redirect()->route('rutaClientes')
-        ->with('success', 'El cliente ha sido actualizado exitosamente.');
+        // return redirect()->route('rutaClientes')
+        // ->with('success', 'El cliente ha sido actualizado exitosamente.');
+        return redirect()->route('rutaClientes')->with('exito', 'El cliente ha sido eliminado correctamente.');
 
 
     }

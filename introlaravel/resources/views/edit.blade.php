@@ -4,11 +4,25 @@
 @section('contenido')
 
     <div class="container mt-5 col-md-6">
-        @if (session('exito'))
+
+        @if (@session('exito'))
+        <script>
+            Swal.fire({
+                title: "Actualización Exitosa",
+                text: "{{session('exito') }}",
+                icon: "success",
+                confirmButtonText: "Aceptar"
+            });
+
+        </script>
+
+
+        @endif
+        {{-- @if (session('exito'))
 
 
             <x-Alert tipo="success"> {{session('exito')}} </x-Alert>
-        @endif
+        @endif --}}
 
         @session('exito')
         <x-Alert tipo="warning"> {{ $value }} </x-Alert>
@@ -79,6 +93,8 @@
             </div>
         </div>
     </div>
+
+
     <script>
         function confirmarActualizacion() {
             return confirm('¿Está seguro de que desea actualizar los datos del cliente?');
