@@ -23,6 +23,8 @@
 
 
         <a href="/form" class="btn btn-primary"> {{ __('Ir al Registro')  }}</a>
+        <a href="{{route('cliente.create')}}" class="btn-primary"> {{ __('Ir al Registro')  }}</a>
+
 
 
 
